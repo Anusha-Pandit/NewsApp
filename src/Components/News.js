@@ -10,7 +10,6 @@ const News = (props) => {
     const [page, setPage] = useState(1);
     const [totalResults, setTotalResults] = useState(0);
 
-    document.title = `NewsApp - ${props.category}`;
 
     //async updateNews() {
     const updateNews = async () => {
@@ -29,7 +28,8 @@ const News = (props) => {
     //async componentDidMount() {
     useEffect(() => {
         updateNews();
-    }, [page, props.category])
+        document.title = `NewsApp - ${props.category}`;
+    }, [])
     
     // const handlePrevClick = async () => {
     //     setPage( page- 1 );
