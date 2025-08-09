@@ -28,7 +28,7 @@ const News = (props) => {
     //async componentDidMount() {
     useEffect(() => {
         updateNews();
-        document.title = `NewsApp - ${props.category}`;
+        document.title = `NewsUp - ${props.category}`;
     }, [])
     
     // const handlePrevClick = async () => {
